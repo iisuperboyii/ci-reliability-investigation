@@ -6,7 +6,6 @@ on:
   pull_request:
     branches: [ main ]
 
-# SECURITY CONCERN: Overly permissive permissions (should be restricted to contents: read)
 permissions:
   contents: read
 
@@ -28,7 +27,5 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      # INTENTIONAL BUG: Executing 'test-ci' which does not exist in package.json
-      # This will fail the pipeline immediately.
       - name: Run Test Suite
         run: npm run test

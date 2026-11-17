@@ -1,0 +1,1 @@
+use of permissions: write-all in ci.yml is the safety concern and anyone triggering the workflow runs code with write capabilities to the repo. fixed it by applying permissions: contents: read
